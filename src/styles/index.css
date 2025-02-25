@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Define your design system variables */
 @layer base {
   :root {
     /* Colors */
@@ -77,39 +76,13 @@
   .bg-gray-20 {
     background-color: var(--color-gray-20);
   }
+  .bg-gray-00 {
+    background-color: var(--color-gray-00);
+  }
   .text-white {
     color: var(--color-white);
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-
-  /* Spacing */
-  .p-80 {
-    padding: var(--spacing-80);
-  }
-  .p-60 {
-    padding: var(--spacing-60);
-  }
-  .p-40 {
-    padding: var(--spacing-40);
-  }
-  .p-32 {
-    padding: var(--spacing-32);
-  }
-  .p-28 {
-    padding: var(--spacing-28);
-  }
-  .p-20 {
-    padding: var(--spacing-20);
-  }
-  .p-16 {
-    padding: var(--spacing-16);
-  }
-  .p-8 {
-    padding: var(--spacing-8);
-  }
-  .p-4 {
-    padding: var(--spacing-4);
   }
 }

@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import useEmployees from "./hooks/getEmployees";
 
 function App() {
@@ -12,11 +13,10 @@ function App() {
   }
 
   return (
-    <>
-      <p className="bg-red-500">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="bg-gray-00">
+      <Header />
+      teste
+    </div>
   );
 }
 
