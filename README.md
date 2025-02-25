@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Nome do Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tabela de Funcionários.
 
-Currently, two official plugins are available:
+## Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto é uma aplicação web desenvolvida em React.js que exibe uma tabela responsiva com dados consumidos de uma API simulada utilizando `json-server`. Ele inclui funcionalidades como pesquisa por nome, cargo e número de telefone, além de formatação de datas e números de telefone no front-end.
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Antes de rodar a aplicação, certifique-se de ter instalado:
 
-- Configure the top-level `parserOptions` property like this:
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/) como gerenciador de pacotes
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Instruções para Rodar a Aplicação
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/rmdbarbosa/tabela.git
+cd tabela
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Instalar Dependências
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Se estiver usando npm:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+Ou com Yarn:
+
+```bash
+yarn install
+```
+
+### 3. Iniciar o Servidor JSON (API Simulada)
+
+```bash
+json-server --watch db.json
+```
+
+### 4. Rodar a Aplicação
+
+Se estiver usando npm:
+
+```bash
+npm run dev
+```
+
+Ou com Yarn:
+
+```bash
+yarn dev
+```
+
+A aplicação será aberta automaticamente no navegador.
+
+## Tecnologias Utilizadas
+
+- React.js
+- Tailwind CSS
+- json-server
+- TypeScript
